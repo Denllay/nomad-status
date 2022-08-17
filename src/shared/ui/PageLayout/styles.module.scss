@@ -1,0 +1,10 @@
+.main {
+    width: 100vw;
+    background-color: var(--chakra-colors-black);
+    min-height: 100vh;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}

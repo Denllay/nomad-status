@@ -1,0 +1,47 @@
+.main {
+    background: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 620px;
+    padding: 10px;
+    width: 60%;
+}
+
+.head {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+}
+
+.select {
+    cursor: pointer;
+    outline: none;
+
+    &:focus {
+        outline: none !important;
+        box-shadow: none !important;
+        border: 0 !important;
+    }
+
+    &_box {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &_item {
+        background: black;
+        color: black
+    }
+}
+
+
+.tokens {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

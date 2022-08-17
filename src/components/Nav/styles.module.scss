@@ -1,0 +1,118 @@
+.main {
+    height: 8vh;
+    width: 100vw;
+    background: #fff;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo {
+    top: 0.1vh;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+
+    &_nomad {
+        &:not(:hover) {
+            transition: 0.6s;
+        }
+    }
+
+    &_status {
+        &:not(:hover) {
+            transition: 0.6s;
+        }
+    }
+}
+
+.items {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    display: flex;
+    z-index: 2;
+}
+
+.item {
+    cursor: pointer;
+    position: absolute;
+    width: 51.05%;
+    height: 101%;
+    display: flex;
+    align-items: center;
+
+    &_text {
+        font-size: 36px;
+        text-decoration: none !important;
+        z-index: 1;
+        margin: 0 4%;
+    }
+
+    &:hover::before {
+        background: black;
+        transition: 0.5s;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        clip-path: inherit;
+        z-index: 0;
+        background: white;
+        transition: 0.6s;
+    }
+
+    &:not(:hover) &_text,
+    & {
+        transition: 0.6s;
+    }
+
+    &:hover &_text {
+        color: #fff !important;
+        transition: 0.5s;
+    }
+
+}
+
+.item:first-child {
+    left: 0;
+    justify-content: flex-end;
+    clip-path: polygon(0 0, 96% 0, 100% 100%, 0% 100%);
+    background: black;
+
+    &::before {
+        right: 4px;
+    }
+
+    &:hover~.logo {
+        &>.logo_nomad {
+            fill: white;
+            transition: 0.5s;
+        }
+
+        &>.logo_status {
+            color: white;
+            transition: 0.5s;
+        }
+    }
+}
+
+.item:nth-child(2) {
+    right: 0;
+    justify-content: flex-start;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 4% 100%);
+    background: black;
+
+    &::before {
+        right: 4px;
+    }
+}
